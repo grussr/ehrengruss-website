@@ -7,11 +7,14 @@ layout: default
   <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
 <script type="text/javascript">
   $(document).ready(function() { 
-  updateSecondsDisplay();
+    updateSecondsDisplay();
   });
   
+  var startDate = new Date("8/13/2014");
+  
   function updateSecondsDisplay() {
-  $("#secondsSpan").val("abc");
+    $("#secondsSpan").text(new Date() - startDate);
+    setTimeOut(updateSecondsDisplay, 1000);
   }
 </script>
   As of now, Ehren is <span id="secondsSpan"></span> seconds old.
