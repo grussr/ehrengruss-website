@@ -13,7 +13,7 @@ layout: default
   var startDate = new Date("8/13/2014");
   
   function updateSecondsDisplay() {
-    $("#secondsSpan").text(Math.Round((new Date() - startDate) / 1000));
+    $("#secondsSpan").text(Math.round((new Date() - startDate) / 1000));
     setTimeout(updateSecondsDisplay, 500);
   }
 </script>
