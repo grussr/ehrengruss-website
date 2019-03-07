@@ -13,8 +13,8 @@ layout: default
   var startDate = new Date("8/13/2014");
   
   function updateSecondsDisplay() {
-    $("#secondsSpan").text(new Date() - startDate);
-    setTimeOut(updateSecondsDisplay, 1000);
+    $("#secondsSpan").text((new Date() - startDate) / 1000);
+    setTimeOut(updateSecondsDisplay, 500);
   }
 </script>
   As of now, Ehren is <span id="secondsSpan"></span> seconds old.
